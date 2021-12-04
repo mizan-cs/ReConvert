@@ -47,7 +47,7 @@ class ShopifyAppController extends Controller
         if ($this->checkIfStoreHaveScriptTag($shop)) {return;};
 
         // Set this to constant variable
-        $appScriptTagUrl = "https://reconvert.test/js/reconvert-app.js";
+        $appScriptTagUrl = env('SHOPIFY_SCRIPT_TAG_URL');
         $context = [
             "script_tag" => [
                 "event"             => "onload",
@@ -66,7 +66,7 @@ class ShopifyAppController extends Controller
      */
     public function checkIfStoreHaveScriptTag(User $shop) {
         // URL of the app script tag
-        $appScriptTagUrl = "https://reconvert.test/js/reconvert-app.js";
+        $appScriptTagUrl = env('SHOPIFY_SCRIPT_TAG_URL');
 
         $scriptTags = $shop->api()->rest('GET', '/admin/api/script_tags.json')['body']->container['script_tags'];
         foreach ($scriptTags as $scriptTag){
