@@ -5,7 +5,7 @@ const axios = require('axios').default;
 const cartButton = document.getElementById('add-to-cart-button-th');
 
 // This need to assign in constant variable
-const apiUrl = 'https://reconvert.test';
+const apiUrl = 'https://reconvert.themizan.me';
 
 var buttonLabel = 'Add To Cart';
 var buttonColor = '#000';
