@@ -41,7 +41,6 @@ function openBox(res) {
     var activeImageIndex = 0;
     var activeImage = currentProduct.images[activeImageIndex];
 
-
     // Configuring the popup HTML
     var popup = `
     <div class="popup-box" id="popup-box">
@@ -112,7 +111,6 @@ function openBox(res) {
   </div>
   `
 
-
     var body = document.getElementById('reconvert-app');
     body.innerHTML = body.innerHTML + popup;
 
@@ -138,7 +136,6 @@ function openBox(res) {
         return;
     });
 
-
     // Close button click event
     var closeButton = document.getElementById('closeButton');
     closeButton.addEventListener('click', function () {
@@ -155,4 +152,3 @@ function openBox(res) {
 
     });
 }
-
